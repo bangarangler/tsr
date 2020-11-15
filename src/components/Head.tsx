@@ -11,6 +11,7 @@ type Props = {
   isActive?: boolean; // Optional prop
   // thing?: number; // number
   // thing2?: string[]; // arr of strings
+  // thing2?: Array<string>; // arr of strings
   // status?: "loading" | "loaded"; // only loading or loaded
   // thing3?: {};
   // thing4?: {
