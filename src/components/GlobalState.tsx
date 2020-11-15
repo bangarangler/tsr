@@ -19,9 +19,15 @@ type Action =
   | { type: "three"; payload: "b" }
   | { type: "four"; payload: ["b"] };
 
-type State = {
+// Types
+// type State = {
+//   rValue: boolean;
+// };
+
+// Interface
+interface State {
   rValue: boolean;
-};
+}
 
 const reducer = (state: State, action: Action) => {
   switch (action.type) {

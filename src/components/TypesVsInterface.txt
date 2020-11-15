@@ -1,0 +1,14 @@
+// Types Vs Interfaces
+
+// Types
+// More constrained
+// Better intersecting
+// Better in error messages
+// Can be used in unions
+//
+// Interfaces
+// Better when authoring a library
+// Extendable
+// Can be augmented
+
+// https://www.educba.com/typescript-type-vs-interface/
