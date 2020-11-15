@@ -8,9 +8,9 @@ const Input = () => {
   const ref = useRef<HTMLInputElement>(null!);
   // not common
   // const ref = useRef<HTMLInputElement | null>(null);
-  if (ref && ref.current) {
-    console.log("ref.current :>> ", ref.current.value);
-  }
+  // if (ref && ref.current) {
+  console.log("ref.current :>> ", ref?.current?.value);
+  // }
   return (
     <input
       type="text"
