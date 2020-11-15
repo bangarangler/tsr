@@ -1,6 +1,21 @@
 import React, { useReducer } from "react";
 
-const reducer = (state: any, action: any) => {
+// type Action = {
+//   type: "one" | "two" | "three";
+// };
+
+// can do Action like this if payload is changing
+type Action =
+  | { type: "one" }
+  | { type: "two" }
+  | { type: "three"; payload: "b" }
+  | { type: "four"; payload: ["b"] };
+
+type State = {
+  rValue: boolean;
+};
+
+const reducer = (state: State, action: Action) => {
   switch (action.type) {
     case "one":
       return {
@@ -12,7 +27,10 @@ const reducer = (state: any, action: any) => {
         ...state,
         rValue: false,
       };
+    default:
+      return state;
   }
+  // return state;
 };
 
 const initState = {
