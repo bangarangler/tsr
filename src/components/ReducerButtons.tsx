@@ -1,5 +1,6 @@
-import React, { useReducer, useRef } from "react";
+import React, { useReducer, useRef, useContext } from "react";
 import { useClickOutside } from "./useClickOutside";
+import { GlobalContext } from "./GlobalState";
 
 // type Action = {
 //   type: "one" | "two" | "three";
@@ -41,12 +42,13 @@ const initState = {
 const ReducerButtons = () => {
   const [state, dispatch] = useReducer(reducer, initState);
   const ref = useRef<HTMLDivElement>(null!);
+  const { rValue } = useContext(GlobalContext);
   useClickOutside(ref, () => {
     console.log("clicked outside");
   });
   return (
     <div ref={ref}>
-      {state?.rValue && <h1>Visible</h1>}
+      {rValue && <h1>Visible</h1>}
       <button onClick={() => dispatch({ type: "one" })}>Action One</button>
       <button onClick={() => dispatch({ type: "two" })}>Action Two</button>
     </div>
