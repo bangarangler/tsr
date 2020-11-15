@@ -9,8 +9,9 @@ function App() {
     <div className="App">
       <Head title="Hello" isActive={false} />
       <Button
-        onClick={(value) => {
-          console.log(value);
+        onClick={(e) => {
+          e.preventDefault();
+          console.log(e);
         }}
       />
       <header className="App-header">
